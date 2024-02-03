@@ -14,6 +14,11 @@
     <!-- Stylesheets & Fonts -->
     <link href="css/plugins.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
     <style>
         .contact ul {
             display: flex;
@@ -69,6 +74,98 @@
             display: none;
         }
 
+        .slider-container {
+            width: 80%;
+            overflow: hidden;
+        }
+
+        .slide {
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide img {
+            max-width: 100%;
+            height: 400px;
+            width: inherit;
+            border-radius: 8px;
+        }
+
+        #page-title {
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .page-title {
+            display: flex;
+            justify-content: center;
+        }
+
+        .slide p {
+            margin: 10px 0;
+            font-size: 24px;
+            line-height: 1.5;
+        }
+
+        .slide del {
+            color: #888;
+        }
+
+        .slide ins {
+            color: #e44d26;
+            font-weight: bold;
+        }
+
+        .slide button {
+            background-color: #e44d26;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 32px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .slide button:hover {
+            color: #e44d26;
+            background-color: #fff;
+        }
+
+        .slick-track {
+            display: flex;
+            align-items: center;
+        }
+
+        .slick-next {
+            right: 60px !important;
+        }
+
+
+
+        .slick-prev {
+            left: 100px !important;
+            z-index: 1;
+        }
+
+        .slick-prev img {
+            position: absolute;
+            left: -73px !important;
+        }
+
+        .slick-next:before,
+        .slick-prev:before {
+            display: none;
+        }
+
+        .accordion-image {
+            aspect-ratio: 3/2;
+            border-radius: 8px;
+        }
+
         @media (max-width: 768px) {
             .quote {
                 font-size: 15px;
@@ -103,6 +200,33 @@
                 display: flex;
                 justify-content: center;
             }
+
+            .slide img {
+                height: 200px;
+            }
+
+            .slide p {
+                margin: 10px 0;
+                font-size: 18px;
+                line-height: 1.5;
+            }
+
+            .slide button {
+                font-size: 20px;
+            }
+
+            .slick-next img {
+                position: absolute;
+                left: 40px;
+                width: 32px;
+            }
+
+            .slick-prev img {
+                right: 78px;
+                position: absolute;
+                width: 32px;
+                left: -90px !important;
+            }
         }
     </style>
 </head>
@@ -118,7 +242,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="cool-logo">
-                        <img src="images/CoolCraftLogo-removebg-preview.png" width="100px" height="60px"/>
+                        <img src="images/CoolCraftLogo-removebg-preview.png" width="160px" height="60px" />
                     </div>
                     <!-- <div style="margin-top:1rem;">
                         <span class="quote lead text-center" style="color: white;">Cool Craft Repairs</span>
@@ -145,7 +269,6 @@
                 <!--Navigation Resposnive Trigger-->
                 <div id="mainMenu-trigger"> <a class="lines-button x"><span class="lines"></span></a> </div>
                 <!--end: Navigation Resposnive Trigger-->
-                <!--end: Navigation Resposnive Trigger-->
                 <div id="mainMenu">
                     <div class="container">
                         <nav>
@@ -170,45 +293,63 @@
     <!--END: HEADER-->
 
     <!-- Page title -->
-    <!-- <section id="page-title" data-bg-parallax="images/mainbackground.jpg">
+    <section id="page-title" class="slider">
         <div class="container">
             <div class="page-title">
-                <div class="div-content"></div>
+                <button type="button" class="slick-prev" id="customPrevBtn"><img src="images/leftlogo.png" width="50px"/></button>
+                <div class="slider-container">
+                    <div class="slide">
+                        <img src="images/acrepair3.webp" alt="AC Image" />
+                    </div>
+                    <div class="slide">
+                        <img src="images/fridgerepair2.jpg" alt="Cool AC Image" />
+                    </div>
+                    <div class="slide">
+                        <img src="images/acrepair2.jpg" alt="Cool Fridge Image" />
+                    </div>
+                    <div class="slide">
+                        <img src="images/fridgerpair1.webp" alt="Fridge Image" />
+                    </div>
+                    <div class="slide">
+                        <p style="font-size: 16px;">COMPLETE REPAIR</p>
+                        <p>ALL TYPES OF AIR CONDITIONERS</p>
+                        <p style="color: darkblue">STARTING FROM</p>
+                        <p><del style="background:darkblue; color: white;">RS.799</del>&nbsp;&nbsp;<ins style="background:deepskyblue; color: white;">RS.599</ins></p>
+                        <button
+                            onclick="window.open('https://api.whatsapp.com/send?phone=+917995414496&text=Hi,%20I%20got%20your%20number%20from%20your%20website,%20Cool%20Craft%20Repairs.%20I%20would%20like%20to%20book%20a%20service.')">BOOK
+                            NOW</button>
+                    </div>
+                </div>
+                <button type="button" class="slick-next" id="customNextBtn"><img src="images/rightlogo.png" width="50px"/></button>
             </div>
         </div>
-    </section> -->
-    <!-- end: Page title -->
+    </section>
 
-   <!-- Page title -->
-   <section id="page-title" data-bg-parallax="images/mainbackground.jpg">
-    <div class="container">
-        <div class="page-title">
-            <div class="div-content"></div>
-        </div>
-    </div>
-</section>
-<!-- end: Page title -->
+    <!-- end: Page title -->
 
     <!-- WELCOME -->
     <section>
         <div class="container">
             <div class="row">
                 <div class="col-lg-5">
-                    <h2 class="text-medium m-t-0">Welcome to Cool Craft Repairs - Crafting Comfort, One Repair at a Time</h2>
+                    <h2 class="text-medium m-t-0">Welcome to Cool Craft Repairs - Crafting Comfort, One Repair at a Time
+                    </h2>
                     <div class="seperator"></div>
-                    <p class="lead">At Cool Craft Repairs, we bring a touch of coolness and craftsmanship to your home. Specializing in fridge and air conditioning repairs, our mission is to ensure your appliances operate at peak performance, providing you with the comfort and reliability you deserve.<br></p>
+                    <p class="lead">At Cool Craft Repairs, we bring a touch of coolness and craftsmanship to your home.
+                        Specializing in fridge and air conditioning repairs, our mission is to ensure your appliances
+                        operate at peak performance, providing you with the comfort and reliability you deserve.<br></p>
                 </div>
                 <div class="col-lg-7">
-                    <img src="images/fridge1.jpg" class="img-fluid" alt="fridge">
+                    <img src="images/fridge1.jpg" class="img-fluid" alt="fridge" style="border-radius: 8px;">
                 </div>
             </div><br>
-            <div class="carousel" data-items="3" data-dots="false"> 
+            <div class="carousel" data-items="3" data-dots="false">
                 <img src="images/fridge5.jpg" alt="fridge" class="accordion-image">
-                <img src="images/ac2.jpg" alt="fridge" class="accordion-image">
+                <img src="images/acrepair1.jpg" alt="fridge" class="accordion-image">
                 <img src="images/fridge4.jpg" alt="fridge" class="accordion-image">
-                <img src="images/coolac1.jpg" alt="fridge" class="accordion-image">
+                <img src="images/acrepair2.jpg" alt="fridge" class="accordion-image">
                 <img src="images/fridge3.jpg" alt="fridge" class="accordion-image">
-                <img src="images/coolac3.jpg" alt="fridge" class="accordion-image">
+                <img src="images/acrepair3.webp" alt="fridge" class="accordion-image">
 
             </div>
         </div>
@@ -222,24 +363,42 @@
                 <div class="col-lg-6">
                     <h3>Craftsmanship at its Finest </h3>
                     <div>
-                        At Cool Craft Repairs, we view every repair as a craft. Our skilled technicians bring precision, expertise, and a passion for quality to each job. Whether your fridge needs a quick fix or your air conditioning system requires a comprehensive overhaul, you can trust our team to handle it with care and attention to detail.
+                        At Cool Craft Repairs, we view every repair as a craft. Our skilled technicians bring precision,
+                        expertise, and a passion for quality to each job. Whether your fridge needs a quick fix or your
+                        air conditioning system requires a comprehensive overhaul, you can trust our team to handle it
+                        with care and attention to detail.
                     </div><br>
                     <strong>Emergency Assistance When You Need It</strong><br>
-                    We know that appliance breakdowns can be stressful, especially when they happen unexpectedly. That's why we offer emergency assistance to provide immediate relief during urgent situations. Just give our emergency hotline a call, and our responsive team will be there to assist you promptly.<br><br>
+                    We know that appliance breakdowns can be stressful, especially when they happen unexpectedly. That's
+                    why we offer emergency assistance to provide immediate relief during urgent situations. Just give
+                    our emergency hotline a call, and our responsive team will be there to assist you promptly.<br><br>
                     <div>
-                        <img src="images/fridge2.jpg" alt="fridge" style="width: -webkit-fill-available;;">
+                        <img src="images/fridge2.jpg" alt="fridge" style="width: -webkit-fill-available; border-radius: 8px;">
                     </div>
                 </div>
 
                 <div class="col-lg-6">
                     <h3>Our Work: Crafting Coolness, Every Day</h3>
-                    <p>Discover a new level of comfort with Cool Craft Repairs, where we specialize in crafting cool environments for your home. As seasoned experts in fridge and air conditioning repairs, our dedicated team is committed to delivering excellence in every service we provide. Your home is your sanctuary, and we understand the importance of maintaining a cool and comfortable atmosphere.</p>
-                    <p>Step into a world of cool comfort and unparalleled craftsmanship with Cool Craft Repairs. As specialists in the art of fridge and air conditioning repairs, we take pride in being the go-to solution for your home's cooling needs. From the hum of your fridge to the whisper of a well-functioning AC, we understand the significance of creating an oasis of coolness in your living space.</p>
-                    Our team of skilled technicians is dedicated to crafting coolness in every repair. With years of experience under our belt, we bring a blend of expertise and innovation to the table. Whether it's a minor adjustment or a major overhaul, we approach each task with the precision and care needed to ensure your appliances operate at their best.<br><br>
+                    <p>Discover a new level of comfort with Cool Craft Repairs, where we specialize in crafting cool
+                        environments for your home. As seasoned experts in fridge and air conditioning repairs, our
+                        dedicated team is committed to delivering excellence in every service we provide. Your home is
+                        your sanctuary, and we understand the importance of maintaining a cool and comfortable
+                        atmosphere.</p>
+                    <p>Step into a world of cool comfort and unparalleled craftsmanship with Cool Craft Repairs. As
+                        specialists in the art of fridge and air conditioning repairs, we take pride in being the go-to
+                        solution for your home's cooling needs. From the hum of your fridge to the whisper of a
+                        well-functioning AC, we understand the significance of creating an oasis of coolness in your
+                        living space.</p>
+                    Our team of skilled technicians is dedicated to crafting coolness in every repair. With years of
+                    experience under our belt, we bring a blend of expertise and innovation to the table. Whether it's a
+                    minor adjustment or a major overhaul, we approach each task with the precision and care needed to
+                    ensure your appliances operate at their best.<br><br>
                 </div>
             </div>
         </div><br>
-        <p class="text-center">Thank you for entrusting us with your fridge and air conditioning needs. Whether it's a repair, maintenance, or emergency assistance, we're here to bring reliability and peace of mind to your home.</p>
+        <p class="text-center">Thank you for entrusting us with your fridge and air conditioning needs. Whether it's a
+            repair, maintenance, or emergency assistance, we're here to bring reliability and peace of mind to your
+            home.</p>
     </section>
     <!-- end: ACCORDION & TEXT -->
 
@@ -342,6 +501,32 @@
 
     <!--Template functions-->
     <script src="js/functions.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 </body>
+<script>
+    $(document).ready(function(){
+        // Initialize the slider
+        var slider = $('.slider-container').slick({
+            autoplay: true,
+            autoplaySpeed: 1500,
+            arrows: true,
+            dots: true,
+            // prevArrow: '<button type="button" class="slick-prev" id="customPrevBtn"><img src="images/leftlogo.png" width="50px"/></button>',
+            // nextArrow: '<button type="button" class="slick-next" id="customNextBtn"><img src="images/rightlogo.png" width="50px"/></button>'
+        });
+
+        // Add click event to the custom previous button
+        $('#customPrevBtn').on('click', function() {
+            slider.slick('slickPrev'); // Call Slick's 'slickPrev' function to go to the previous slide
+        });
+        $('#customNextBtn').on('click', function() {
+            slider.slick('slickNext'); // Call Slick's 'slickPrev' function to go to the previous slide
+        });
+    });
+</script>
+>
+
+
 
 </html>

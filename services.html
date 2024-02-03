@@ -69,6 +69,11 @@
 			display: none;
 		}
 
+		.accordion-image {
+			aspect-ratio: 3/2;
+			border-radius: 8px;
+		}
+
 
 		@media (max-width: 768px) {
 			.quote {
@@ -100,75 +105,74 @@
 				height: 100%;
 			}
 
-.cool-logo {
-	display: flex;
-	justify-content: center;
-}
+			.cool-logo {
+				display: flex;
+				justify-content: center;
+			}
 		}
 	</style>
 </head>
 <div class="contact_whatsapp"
-    onclick="window.open('https://api.whatsapp.com/send?phone=+917995414496&text=Hi,%20I%20got%20your%20number%20from%20your%20website,%20Cool%20Craft%20Repairs%20')">
-    <img src="images/whatsapp.png">
+	onclick="window.open('https://api.whatsapp.com/send?phone=+917995414496&text=Hi,%20I%20got%20your%20number%20from%20your%20website,%20Cool%20Craft%20Repairs%20')">
+	<img src="images/whatsapp.png">
 </div>
 
 <body class="boxed-simple">
 	<!-- Topbar -->
-    <div id="topbar" class="dark topbar-colored topbar-fullwidth">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="cool-logo">
-                        <img src="images/CoolCraftLogo-removebg-preview.png" width="100px" height="60px"/>
-                    </div>
-                    <!-- <div style="margin-top:1rem;">
+	<div id="topbar" class="dark topbar-colored topbar-fullwidth">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="cool-logo">
+						<img src="images/CoolCraftLogo-removebg-preview.png" width="160px" height="60px" />
+					</div>
+					<!-- <div style="margin-top:1rem;">
                         <span class="quote lead text-center" style="color: white;">Cool Craft Repairs</span>
                     </div> -->
-                </div>
-                <div class="col-md-6 d-none d-sm-block">
-                    <div class="contact">
-                        <ul style="display: flex; gap:30px; list-style-type: none;">
-                            <li><a href="mailto:Coolcraftrepairs@gmail.com">Email : <i
-                                        class="fa fa-envelope"></i>Coolcraftrepairs@gmail.com</a></li>
-                            <li><a href="tel:+919666351433"><i class="fa fa-phone"></i> +91 9666351433</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end: Topbar -->
-    <!--HEADER-->
-    <header id="header" class="dark">
-        <div class="header-inner">
-            <div class="container">
-                <a class="phone-display" href="tel:+919666351433"><i class="fa fa-phone"></i> +91 9666351433</a>
-                <!--Navigation Resposnive Trigger-->
-                <div id="mainMenu-trigger"> <a class="lines-button x"><span class="lines"></span></a> </div>
-                <!--end: Navigation Resposnive Trigger-->
-                <!--end: Navigation Resposnive Trigger-->
-                <div id="mainMenu">
-                    <div class="container">
-                        <nav>
-                            <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li class="dropdown"><a href="services.html">Services</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="services.html#refrigerator">Refrigerator Service</a></li>
-                                        <li><a href="services.html#airconditioner">AC Service</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <!--end: Navigation-->
-            </div>
-        </div>
-    </header>
-    <!--END: HEADER-->
+				</div>
+				<div class="col-md-6 d-none d-sm-block">
+					<div class="contact">
+						<ul style="display: flex; gap:30px; list-style-type: none;">
+							<li><a href="mailto:Coolcraftrepairs@gmail.com">Email : <i
+										class="fa fa-envelope"></i>Coolcraftrepairs@gmail.com</a></li>
+							<li><a href="tel:+919666351433"><i class="fa fa-phone"></i> +91 9666351433</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end: Topbar -->
+	<!--HEADER-->
+	<header id="header" class="dark">
+		<div class="header-inner">
+			<div class="container">
+				<a class="phone-display" href="tel:+919666351433"><i class="fa fa-phone"></i> +91 9666351433</a>
+				<!--Navigation Resposnive Trigger-->
+				<div id="mainMenu-trigger"> <a class="lines-button x"><span class="lines"></span></a> </div>
+				<!--end: Navigation Resposnive Trigger-->
+				<div id="mainMenu">
+					<div class="container">
+						<nav>
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li class="dropdown"><a href="services.html">Services</a>
+									<ul class="dropdown-menu">
+										<li><a href="services.html#refrigerator">Refrigerator Service</a></li>
+										<li><a href="services.html#airconditioner">AC Service</a></li>
+									</ul>
+								</li>
+								<li><a href="about.html">About Us</a></li>
+								<li><a href="contact.html">Contact Us</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<!--end: Navigation-->
+			</div>
+		</div>
+	</header>
+	<!--END: HEADER-->
 
 	<!-- Page title -->
 	<section id="page-title" data-bg-parallax="images/coolac3.jpg">
@@ -187,7 +191,10 @@
 	<div class="container">
 		<main class="products-content">
 			<div>
-				<h5><strong>Exploring Possibilities:</strong></h5> At Cool Craft Repairs, we offer a comprehensive range of services to ensure your appliances are running at peak performance. Our skilled technicians are dedicated to providing reliable and efficient solutions for all your fridge and AC needs. Explore our services below:<br><br>
+				<h5><strong>Exploring Possibilities:</strong></h5> At Cool Craft Repairs, we offer a comprehensive range
+				of services to ensure your appliances are running at peak performance. Our skilled technicians are
+				dedicated to providing reliable and efficient solutions for all your fridge and AC needs. Explore our
+				services below:<br><br>
 				<!-- Refrigerator -->
 				<div>
 					<div>
@@ -196,7 +203,9 @@
 								<div class="ac-item">
 									<h5><strong> Fridge Repairs</strong></h5>
 									<div>
-										Whether your fridge is not cooling properly, making strange noises, or facing any other issues, our experts are here to diagnose and fix the problem. From compressor repairs to thermostat replacements, we handle it all with precision.
+										Whether your fridge is not cooling properly, making strange noises, or facing
+										any other issues, our experts are here to diagnose and fix the problem. From
+										compressor repairs to thermostat replacements, we handle it all with precision.
 									</div>
 								</div>
 							</li>
@@ -204,7 +213,10 @@
 								<div class="ac-item">
 									<h5><strong>Air Conditioning Services</strong></h5>
 									<div>
-										Stay cool and comfortable with our professional air conditioning services. We specialize in AC repairs, maintenance, and installations. From minor adjustments to major overhauls, we ensure your AC system operates efficiently, providing optimal cooling for your space.
+										Stay cool and comfortable with our professional air conditioning services. We
+										specialize in AC repairs, maintenance, and installations. From minor adjustments
+										to major overhauls, we ensure your AC system operates efficiently, providing
+										optimal cooling for your space.
 									</div>
 								</div>
 							</li>
@@ -225,7 +237,10 @@
 								<div class="ac-item">
 									<h5><strong>Energy Efficiency Solutions</strong></h5>
 									<div>
-										Save on energy costs with our innovative solutions for improving the energy efficiency of your appliances. We analyze your systems and recommend upgrades or adjustments to ensure they operate at peak performance while minimizing energy consumption.
+										Save on energy costs with our innovative solutions for improving the energy
+										efficiency of your appliances. We analyze your systems and recommend upgrades or
+										adjustments to ensure they operate at peak performance while minimizing energy
+										consumption.
 									</div>
 								</div>
 							</li>
@@ -233,9 +248,13 @@
 								<div class="ac-item">
 									<h5><strong>Transparent Pricing</strong></h5>
 									<div>
-										At Cool Craft Repairs, we believe in fair and transparent pricing. Receive upfront quotes for our services, with no hidden costs. We prioritize delivering value for your investment in every repair or maintenance job.
+										At Cool Craft Repairs, we believe in fair and transparent pricing. Receive
+										upfront quotes for our services, with no hidden costs. We prioritize delivering
+										value for your investment in every repair or maintenance job.
 
-Choose Cool Craft Repairs for all your fridge and AC service needs. Our commitment to excellence ensures that your appliances receive the care and attention they deserve, bringing lasting cool comfort to your home or business.
+										Choose Cool Craft Repairs for all your fridge and AC service needs. Our
+										commitment to excellence ensures that your appliances receive the care and
+										attention they deserve, bringing lasting cool comfort to your home or business.
 									</div>
 								</div>
 							</li>
@@ -243,17 +262,19 @@ Choose Cool Craft Repairs for all your fridge and AC service needs. Our commitme
 								<div class="ac-item">
 									<h5><strong>Emergency Repairs</strong></h5>
 									<div>
-										Appliance breakdowns can happen at any time. That's why we offer emergency repair services to address urgent issues promptly. Call our emergency hotline, and our team will be on standby to provide immediate assistance.<br><br>
+										Appliance breakdowns can happen at any time. That's why we offer emergency
+										repair services to address urgent issues promptly. Call our emergency hotline,
+										and our team will be on standby to provide immediate assistance.<br><br>
 										<div class="carousel" data-items="3" data-dots="false">
-											<img src="images/fridge1.jpg" alt="Fridge" class="accordion-image">
+											<img src="images/fridgerepair2.jpg" alt="Fridge" class="accordion-image">
 											<img src="images/fridge5.jpg" alt="Fridge" class="accordion-image">
 											<img src="images/fridge3.jpg" alt="Fridge" class="accordion-image">
-											<img src="images/fridge6.jpg" alt="Fridge" class="accordion-image">
+											<img src="images/fridgerpair1.webp" alt="Fridge" class="accordion-image">
 										</div>
 									</div>
 								</div>
 							</li>
-						<!-- </ul>
+							<!-- </ul>
 					</div>
 				</div>
 
@@ -300,7 +321,8 @@ Choose Cool Craft Repairs for all your fridge and AC service needs. Our commitme
 									<h5><strong>AC Services</strong></h5>
 									<div>
 										When the scorching heat of summer arrives, your air conditioner becomes your
-										best friend, ensuring that your home remains an oasis of comfort. At Cool Craft Repairs, we understand the crucial role your air conditioning system plays
+										best friend, ensuring that your home remains an oasis of comfort. At Cool Craft
+										Repairs, we understand the crucial role your air conditioning system plays
 										in your daily life, and we're dedicated to making sure it keeps you cool when
 										you need it most.<br><br>
 										<div class="carousel" data-items="3" data-dots="false">
@@ -313,12 +335,12 @@ Choose Cool Craft Repairs for all your fridge and AC service needs. Our commitme
 									</div>
 								</div>
 							</li>
-						<!-- </ul>
+							<!-- </ul>
 					</div>
 				</div> -->
 
-				
-			</div>
+
+					</div>
 		</main>
 		<section>
 			<div class="container">
@@ -399,90 +421,90 @@ Choose Cool Craft Repairs for all your fridge and AC service needs. Our commitme
 	<div class="seperator m-b-0"></div>
 
 	<!-- Footer -->
-    <footer id="footer" class="inverted">
-        <div class="footer-content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-5">
-                        <div class="widget">
+	<footer id="footer" class="inverted">
+		<div class="footer-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5">
+						<div class="widget">
 
-                            <div class="widget-title">Cool Craft Repairs</div>
-                            <p class="mb-5"> All rights reserved. Copyright © 2024.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="row">
-                            <div class="col-lg-3">
-                                <div class="widget">
-                                    <div class="widget-title">Discover</div>
-                                    <ul class="list">
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a href="services.html">Services</a></li>
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="contact.html">Contact Us</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+							<div class="widget-title">Cool Craft Repairs</div>
+							<p class="mb-5"> All rights reserved. Copyright © 2024.</p>
+						</div>
+					</div>
+					<div class="col-lg-7">
+						<div class="row">
+							<div class="col-lg-3">
+								<div class="widget">
+									<div class="widget-title">Discover</div>
+									<ul class="list">
+										<li><a href="index.html">Home</a></li>
+										<li><a href="services.html">Services</a></li>
+										<li><a href="about.html">About Us</a></li>
+										<li><a href="contact.html">Contact Us</a></li>
+									</ul>
+								</div>
+							</div>
 
-                            <div class="col-lg-3">
-                                <div class="widget">
-                                    <div class="widget-title">Services</div>
-                                    <ul class="list">
-                                        <li><a href="serrefrigeratorvices.html#">Refrigerator</a></li>
-                                        <li><a href="services.html#airconditioner">Air Conditioner</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="widget">
-                                    <div class="widget-title">Contact Us</div>
-                                    <ul class="footer-list" style="list-style-type: none;">
-                                        <li class="footer-item">
-                                            <div class="item-icon">
-                                                <ion-icon name="location-outline"></ion-icon>
-                                            </div>
-                                            <a href="https://goo.gl/maps/BYA5MxQUg5B8ZFLcA">
-                                                <address class="item-text">
-                                                    Hyderabad, Secundrabad ,<br>
-                                                    Telangana.
-                                                </address>
-                                            </a>
-                                        </li>
-                                        <li class="footer-item">
-                                            <div class="item-icon">
-                                                <ion-icon name="call-outline"></ion-icon>
-                                            </div>
-                                            <a href="tel:+919666351433" class="footer-link">+91-9666-351-433</a>
-                                        </li>
-                                        <li class="footer-item">
-                                            <div class="item-icon">
-                                                <ion-icon name="call-outline"></ion-icon>
-                                            </div>
-                                            <a href="tel:+917995414496" class="footer-link">+91-7995-414-496</a>
-                                        </li>
-                                        <li class="footer-item">
-                                            <div class="item-icon">
-                                                <ion-icon name="mail-outline"></ion-icon>
-                                            </div>
-                                            <a href="mailto:Coolcraftrepairs@gmail.com"
-                                                class="footer-link">Coolcraftrepairs@gmail.com</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copyright-content">
-            <div class="container">
-                <div class="copyright-text text-center">&copy; 2024 - Cool Craft Repairs. All Rights Reserved.</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- end: Footer -->
+							<div class="col-lg-3">
+								<div class="widget">
+									<div class="widget-title">Services</div>
+									<ul class="list">
+										<li><a href="serrefrigeratorvices.html#">Refrigerator</a></li>
+										<li><a href="services.html#airconditioner">Air Conditioner</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<div class="widget">
+									<div class="widget-title">Contact Us</div>
+									<ul class="footer-list" style="list-style-type: none;">
+										<li class="footer-item">
+											<div class="item-icon">
+												<ion-icon name="location-outline"></ion-icon>
+											</div>
+											<a href="https://goo.gl/maps/BYA5MxQUg5B8ZFLcA">
+												<address class="item-text">
+													Hyderabad, Secundrabad ,<br>
+													Telangana.
+												</address>
+											</a>
+										</li>
+										<li class="footer-item">
+											<div class="item-icon">
+												<ion-icon name="call-outline"></ion-icon>
+											</div>
+											<a href="tel:+919666351433" class="footer-link">+91-9666-351-433</a>
+										</li>
+										<li class="footer-item">
+											<div class="item-icon">
+												<ion-icon name="call-outline"></ion-icon>
+											</div>
+											<a href="tel:+917995414496" class="footer-link">+91-7995-414-496</a>
+										</li>
+										<li class="footer-item">
+											<div class="item-icon">
+												<ion-icon name="mail-outline"></ion-icon>
+											</div>
+											<a href="mailto:Coolcraftrepairs@gmail.com"
+												class="footer-link">Coolcraftrepairs@gmail.com</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copyright-content">
+			<div class="container">
+				<div class="copyright-text text-center">&copy; 2024 - Cool Craft Repairs. All Rights Reserved.</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- end: Footer -->
 
 	</div> <!-- end: Body Inner -->
 
