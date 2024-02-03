@@ -166,6 +166,14 @@
             border-radius: 8px;
         }
 
+        .phone-number-display {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            font-size: 20px;
+        }
+
         @media (max-width: 768px) {
             .quote {
                 font-size: 15px;
@@ -296,7 +304,8 @@
     <section id="page-title" class="slider">
         <div class="container">
             <div class="page-title">
-                <button type="button" class="slick-prev" id="customPrevBtn"><img src="images/leftlogo.png" width="50px"/></button>
+                <button type="button" class="slick-prev" id="customPrevBtn"><img src="images/leftlogo.png"
+                        width="50px" /></button>
                 <div class="slider-container">
                     <div class="slide">
                         <img src="images/acrepair3.webp" alt="AC Image" />
@@ -314,18 +323,24 @@
                         <p style="font-size: 16px;">COMPLETE REPAIR</p>
                         <p>ALL TYPES OF AIR CONDITIONERS</p>
                         <p style="color: darkblue">STARTING FROM</p>
-                        <p><del style="background:darkblue; color: white;">RS.799</del>&nbsp;&nbsp;<ins style="background:deepskyblue; color: white;">RS.599</ins></p>
+                        <p><del style="background:darkblue; color: white;">RS.799</del>&nbsp;&nbsp;<ins
+                                style="background:deepskyblue; color: white;">RS.599</ins></p>
                         <button
                             onclick="window.open('https://api.whatsapp.com/send?phone=+917995414496&text=Hi,%20I%20got%20your%20number%20from%20your%20website,%20Cool%20Craft%20Repairs.%20I%20would%20like%20to%20book%20a%20service.')">BOOK
                             NOW</button>
                     </div>
                 </div>
-                <button type="button" class="slick-next" id="customNextBtn"><img src="images/rightlogo.png" width="50px"/></button>
+                <button type="button" class="slick-next" id="customNextBtn"><img src="images/rightlogo.png"
+                        width="50px" /></button>
             </div>
         </div>
     </section>
 
     <!-- end: Page title -->
+
+    <div class="phone-number-display">
+        <a href="tel:+919666351433"><i class="fa fa-phone"></i> +91 9666351433</a>
+    </div>
 
     <!-- WELCOME -->
     <section>
@@ -373,7 +388,8 @@
                     why we offer emergency assistance to provide immediate relief during urgent situations. Just give
                     our emergency hotline a call, and our responsive team will be there to assist you promptly.<br><br>
                     <div>
-                        <img src="images/fridge2.jpg" alt="fridge" style="width: -webkit-fill-available; border-radius: 8px;">
+                        <img src="images/fridge2.jpg" alt="fridge"
+                            style="width: -webkit-fill-available; border-radius: 8px;">
                     </div>
                 </div>
 
@@ -505,7 +521,7 @@
 
 </body>
 <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
         // Initialize the slider
         var slider = $('.slider-container').slick({
             autoplay: true,
@@ -517,10 +533,10 @@
         });
 
         // Add click event to the custom previous button
-        $('#customPrevBtn').on('click', function() {
+        $('#customPrevBtn').on('click', function () {
             slider.slick('slickPrev'); // Call Slick's 'slickPrev' function to go to the previous slide
         });
-        $('#customNextBtn').on('click', function() {
+        $('#customNextBtn').on('click', function () {
             slider.slick('slickNext'); // Call Slick's 'slickPrev' function to go to the previous slide
         });
     });
