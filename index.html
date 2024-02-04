@@ -75,7 +75,7 @@
         }
 
         .slider-container {
-            width: 80%;
+            width: inherit;
             overflow: hidden;
         }
 
@@ -88,7 +88,7 @@
 
         .slide img {
             max-width: 100%;
-            height: 400px;
+            height: 450px;
             width: inherit;
             border-radius: 8px;
         }
@@ -174,6 +174,25 @@
             font-size: 20px;
         }
 
+        #container {
+            padding: 0 20px;
+        }
+
+        .inner-div1 {
+            height: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .slide1 {
+            height: 450px;
+            background-image: url('images/acrepair1.jpg');
+            background-size: cover;
+        }
+
         @media (max-width: 768px) {
             .quote {
                 font-size: 15px;
@@ -210,7 +229,7 @@
             }
 
             .slide img {
-                height: 200px;
+                height: 250px;
             }
 
             .slide p {
@@ -225,7 +244,7 @@
 
             .slick-next img {
                 position: absolute;
-                left: 40px;
+                left: 46px;
                 width: 32px;
             }
 
@@ -233,7 +252,11 @@
                 right: 78px;
                 position: absolute;
                 width: 32px;
-                left: -90px !important;
+                left: -97px !important;
+            }
+
+            .slide1 {
+                height: 250px;
             }
         }
     </style>
@@ -272,7 +295,7 @@
     <!--HEADER-->
     <header id="header" class="dark">
         <div class="header-inner">
-            <div class="container">
+            <div class="container" id="container">
                 <a class="phone-display" href="tel:+919666351433"><i class="fa fa-phone"></i> +91 9666351433</a>
                 <!--Navigation Resposnive Trigger-->
                 <div id="mainMenu-trigger"> <a class="lines-button x"><span class="lines"></span></a> </div>
@@ -303,36 +326,36 @@
     <!-- Page title -->
     <section id="page-title" class="slider">
         <div class="container">
-            <div class="page-title">
-                <button type="button" class="slick-prev" id="customPrevBtn"><img src="images/leftlogo.png"
-                        width="50px" /></button>
-                <div class="slider-container">
-                    <div class="slide">
-                        <img src="images/acrepair3.webp" alt="AC Image" />
-                    </div>
-                    <div class="slide">
-                        <img src="images/fridgerepair2.jpg" alt="Cool AC Image" />
-                    </div>
-                    <div class="slide">
-                        <img src="images/acrepair2.jpg" alt="Cool Fridge Image" />
-                    </div>
-                    <div class="slide">
-                        <img src="images/fridgerpair1.webp" alt="Fridge Image" />
-                    </div>
-                    <div class="slide">
+            <button type="button" class="slick-prev" id="customPrevBtn"><img src="images/leftlogo.png"
+                    width="50px" /></button>
+            <div class="slider-container">
+                <div class="slide">
+                    <img src="images/acrepair3.webp" alt="AC Image" />
+                </div>
+                <div class="slide">
+                    <img src="images/fridgerepair2.jpg" alt="Cool AC Image" />
+                </div>
+                <div class="slide">
+                    <img src="images/acrepair2.jpg" alt="Cool Fridge Image" />
+                </div>
+                <div class="slide">
+                    <img src="images/fridgerpair1.webp" alt="Fridge Image" />
+                </div>
+                <div class="slide slide1" style="background-image: url('images/acrepair1.jpg');">
+                    <div class="inner-div1">
                         <p style="font-size: 16px;">COMPLETE REPAIR</p>
                         <p>ALL TYPES OF AIR CONDITIONERS</p>
                         <p style="color: darkblue">STARTING FROM</p>
-                        <p><del style="background:darkblue; color: white;">RS.799</del>&nbsp;&nbsp;<ins
-                                style="background:deepskyblue; color: white;">RS.599</ins></p>
+                        <p><del style="background: darkblue; color: white;">RS.799</del>&nbsp;&nbsp;<ins
+                                style="background: deepskyblue; color: white;">RS.599</ins></p>
                         <button
                             onclick="window.open('https://api.whatsapp.com/send?phone=+917995414496&text=Hi,%20I%20got%20your%20number%20from%20your%20website,%20Cool%20Craft%20Repairs.%20I%20would%20like%20to%20book%20a%20service.')">BOOK
                             NOW</button>
                     </div>
                 </div>
-                <button type="button" class="slick-next" id="customNextBtn"><img src="images/rightlogo.png"
-                        width="50px" /></button>
             </div>
+            <button type="button" class="slick-next" id="customNextBtn"><img src="images/rightlogo.png"
+                    width="50px" /></button>
         </div>
     </section>
 
